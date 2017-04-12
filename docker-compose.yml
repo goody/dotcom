@@ -1,0 +1,13 @@
+
+version: '2'
+
+services:
+  dotcom:
+    image: nginx:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./dist:/usr/share/nginx/html
+    ports:
+      - 8080:80
